@@ -16,18 +16,8 @@ entryText = [ thisLayer.parent.name for thisLayer in selectedLayers ]
 entryText = "/" + "/ ".join(entryText).replace(' ', '')
 
 newText = entryText + "\n/n/Placeholder/n/n/Placeholder/n/Placeholder/Placeholder/n\n/o/Placeholder/o/o/Placeholder/o/Placeholder/Placeholder/o"
-#newText = entryText + "\n/H/Placeholder/H/H/Placeholder/H/Placeholder/Placeholder/H\n/O/Placeholder/O/O/Placeholder/O/Placeholder/Placeholder/O"
-#newText = entryText + "\n/a/Placeholder/d/Placeholder/h/Placeholder/e/Placeholder/s/Placeholder/i/Placeholder/o/Placeholder/n/Placeholder"
+#HO = entryText + "\n/H/Placeholder/H/H/Placeholder/H/Placeholder/Placeholder/H\n/O/Placeholder/O/O/Placeholder/O/Placeholder/Placeholder/O"
+#adhesion = entryText + "\n/a/Placeholder/d/Placeholder/h/Placeholder/e/Placeholder/s/Placeholder/i/Placeholder/o/Placeholder/n/Placeholder"
 
-class dataPick(object):
-	def __init__(self):
-		self.w = vanilla.FloatingWindow((500,200))
-		self.w.textbox = vanilla.TextBox((10,10,-10,40), 'Choose a spacing string:')
-		self.w.button = vanilla.Button((10, 10, -10, 20), "n and o", callback=self.buttonCallback)
-		self.w.open()
-	def buttonCallback(self, sender):
-		characters = self.w.newText.get()
-		Glyphs.currentDocument.windowController().addTabWithString_( characters )
-		self.w.close()
-dataPick()
 
+Glyphs.currentDocument.windowController().addTabWithString_( newText )
