@@ -25,8 +25,8 @@ class dataPick(object):
 		self.w.textbox = TextBox((10,10,-10,40), 'Choose a spacing string:')
 		self.w.button = Button((10, 10, -10, 20), "n and o", callback=self.buttonCallback)
 		self.w.open()
-    def buttonCallback(self, sender):
-        characters = self.w.newText.get()
+	def buttonCallback(self, sender):
+		characters = self.w.newText.get()
 		Glyphs.currentDocument.windowController().addTabWithString_( characters )
 		self.w.close()
 
