@@ -22,4 +22,4 @@ for thisLayer in selectedLayers:
 newText = [x for x in entryText if x not in emptyGlyphs]
 newText = "/" + "/ ".join(newText).replace(' ', '')
 
-callAfter( Doc.windowController().addTabWithString_, newText ) # opens new edit tab with the new string.
+Glyphs.currentDocument.windowController().addTabWithString_( newText )
